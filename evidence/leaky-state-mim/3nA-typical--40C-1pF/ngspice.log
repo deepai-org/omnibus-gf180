@@ -1,0 +1,27 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: gf180 leaky state transistor test
+
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        3.3
+bias                                  0.578991
+in                                        1.63
+xstate.tail                           0.819515
+xstate.diode                           2.61617
+out                                     1.6323
+vin#branch                                   0
+vdd#branch                        -6.06315e-09
+
+
+No. of Data Rows : 2527
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

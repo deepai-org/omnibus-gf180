@@ -1,0 +1,20 @@
+GF180 leaky state transistor test
+.include /home/ubuntu/svalbard/scratch/transceiver-pad-pdk/ngspice/design.ngspice
+.lib /home/ubuntu/svalbard/scratch/transceiver-pad-pdk/ngspice/sm141064.ngspice ss
+.lib /home/ubuntu/svalbard/scratch/transceiver-pad-pdk/ngspice/sm141064.ngspice mimcap_typical
+.include /home/ubuntu/kianv/omnibus-gf180/circuits/leaky_state.spice
+.temp -40
+.options reltol=1e-5 abstol=1e-15 vntol=1e-8
+VDD VDD 0 3.3
+IREF VDD BIAS 3e-09
+VIN IN 0 PWL(0 1.63 1m 1.63 1.001m 1.67 3m 1.67 3.001m 1.63 5m 1.63)
+XSTATE IN OUT VDD 0 BIAS leaky_state
+CLOAD OUT 0 1e-12
+.control
+set wr_singlescale
+set wr_vecnames
+tran 2u 5m
+wrdata trace.txt v(IN) v(OUT) i(VDD)
+quit
+.endc
+.end

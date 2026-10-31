@@ -1,0 +1,15 @@
+# Optional isolated Python 3.13+ environment; not required by ordinary model tests.
+cloudpickle==3.1.2
+joblib==1.6.0
+more-itertools==11.2.1
+msgspec==0.22.0
+numpy==2.5.4
+pandas==3.1.0
+psutil==7.2.2
+pyphi @ git+https://github.com/wmayner/pyphi@134a8f31b49db512322465ed3ba5da7194d362fd
+python-dateutil==3.0.0
+pyyaml==6.0.3
+scipy==1.18.1
+six==1.17.0
+tqdm==4.70.1
+tzdata==2026.5

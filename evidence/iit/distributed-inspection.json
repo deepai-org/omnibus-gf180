@@ -1,0 +1,5882 @@
+{
+  "formalism": "IIT_4_0_2023",
+  "pyphi_version": "2.0.0rc5.dev10+g134a8f31b",
+  "requested_revision": "134a8f31b49db512322465ed3ba5da7194d362fd",
+  "model_source_sha256": {
+    "__init__.py": "c0ccc650d42c993a68837790f61bcca3bcbaa6d95a82c58bc381dd39550e5a74",
+    "agent.py": "99d99691650d3e1d64b746f6e39d49641d2468af5610d7b4fa226fe37142a18d",
+    "attention.py": "d71ba0e22b4f24826ad8d774afcdece7333c579dde1a6a215c85f92138bb1dc9",
+    "causal.py": "9229e7f8a0d5fc6548c5352a37d300c43a549e165999d7e712c2cfe4bcafdc4b",
+    "compare_attention.py": "6b44aabde63a90aef1275d62826644622479812141dddb8645caad8095968561",
+    "evaluate.py": "b69f569c6498437e7c3a831bd8d2cf16a3aedec80754c937e075d5de835b9551",
+    "evaluate_noise.py": "a52bcc2cb9c0469d5a4d943f131ff50f550123e0568e93a45db44d951bb22580",
+    "evaluate_switch.py": "b5321b794f03e63f131a7e0e149efca845151952d46d2d863385e6bbe9a9b436",
+    "iit.py": "6c6002af8fcd0208f2b502ddffe699395902bb759a051a6c18a6596d9abca5aa",
+    "learning.py": "e9e26a2aa2719e29dad07b5d7a4db3f5313feb784e60a30540a8a08adc023795",
+    "observer.py": "a58eaf8443f14abd717d29d2ede95af141a2a8aa1692c82aaeec5325d9a6cb55",
+    "perception.py": "8d77ec73ae04f1ef07de6c43a6bcc86e21834ce9a0935179523791c92ca00140",
+    "primitives.py": "c17a9ae33d19e5200f133d1bdcd70d243a5dfed31d974baf0a45255f22788ef3",
+    "workspace.py": "52690534d8c3e797c44005cdf6ac52ce799d7a1db5750c62974843be9112f838"
+  },
+  "quantity": "system integrated information phi_s; not structure Phi",
+  "reference_checks": {
+    "independent_identity": 0.0,
+    "bidirectional_swap": 2.0
+  },
+  "conditional_models": [
+    {
+      "duration": 0.5,
+      "analyses": [
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        }
+      ],
+      "nominal_transition_table": [
+        {
+          "initial": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.19394176853371572,
+            0.17305996966604195,
+            0.44065873241571757,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.19742542722042833,
+            0.1981593007569103,
+            0.6693321639279022,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.19285585123364368,
+            0.1611529625476563,
+            0.24575824758072012,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.19726179024126203,
+            0.19731343240242635,
+            0.5220220269797033,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.20505379955419561,
+            0.6590599231926864,
+            0.44065873241571757,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.2092972375099007,
+            0.6843826594379484,
+            0.6693321639279022,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.20389585797578902,
+            0.6470918879508504,
+            0.24575824758072012,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.20909036358427052,
+            0.6835249175214642,
+            0.5220220269797033,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.870716315189523,
+            0.29711848323043494,
+            0.44065873241571757,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.8634514949607963,
+            0.3144536274621445,
+            0.6693321639279022,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.8723606743374406,
+            0.2863308497754462,
+            0.24575824758072012,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.8637687987312436,
+            0.31393371617017923,
+            0.5220220269797033,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.8656696442624994,
+            0.7803781232314227,
+            0.44065873241571757,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.8572352271206094,
+            0.7979034546769933,
+            0.6693321639279022,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.867568138871769,
+            0.769551883703818,
+            0.24575824758072012,
+            0.43955921053691105
+          ],
+          "final_binary": [
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.8576034707989162,
+            0.7973743589023424,
+            0.5220220269797033,
+            0.9377288011707678
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "deterministic_dependencies": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "background_sensitivity": {
+        "changed_rows": 0,
+        "max_continuous_difference": 0.2554845424798028
+      },
+      "within_bin_sensitivity": {
+        "changed_rows": 10,
+        "max_continuous_difference": 0.2960041382232327
+      }
+    },
+    {
+      "duration": 2.0,
+      "analyses": [
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": null,
+          "status": "unreachable: no defined analysis"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "subset": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "phi_s": 0.0,
+          "status": "computed"
+        }
+      ],
+      "nominal_transition_table": [
+        {
+          "initial": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.4345654255177165,
+            0.5277747297911473,
+            0.8126908132761723,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.47970278518576454,
+            0.6003075578935624,
+            0.9051301275432436,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.4377225896749712,
+            0.5313478870198156,
+            0.7910038476705229,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.4789093126072662,
+            0.5992957118140725,
+            0.8912330557701518,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.4496604637574783,
+            0.6458702438416745,
+            0.8126908132761723,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.4992304854177034,
+            0.7235355724197937,
+            0.9051301275432436,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.45296703343910993,
+            0.649619278368277,
+            0.7910038476705229,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.4983464871597135,
+            0.722413095722083,
+            0.8912330557701518,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.778085874698074,
+            0.6698669456957183,
+            0.8126908132761723,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.7581489318562622,
+            0.741352805142234,
+            0.9051301275432436,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.7771808457438454,
+            0.6747566809139166,
+            0.7910038476705229,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.7583905952598577,
+            0.7404142854384382,
+            0.8912330557701518,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "final_continuous": [
+            0.7703537773005198,
+            0.7800178358376234,
+            0.8126908132761723,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "final_continuous": [
+            0.7501659493023022,
+            0.8520210728979689,
+            0.9051301275432436,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "final_continuous": [
+            0.7693624377183502,
+            0.7849521395032175,
+            0.7910038476705229,
+            0.8751529192060516
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "initial": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "final_continuous": [
+            0.750407256708142,
+            0.8510760986394159,
+            0.8912330557701518,
+            0.9861281021340058
+          ],
+          "final_binary": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "deterministic_dependencies": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "background_sensitivity": {
+        "changed_rows": 16,
+        "max_continuous_difference": 0.7131306830740005
+      },
+      "within_bin_sensitivity": {
+        "changed_rows": 8,
+        "max_continuous_difference": 0.2217356981596571
+      }
+    }
+  ],
+  "candidate": "distributed",
+  "phase": "inspection",
+  "checkpoint_step": 136,
+  "checkpoint_inspect_query": 0.9005597430129076,
+  "checkpoint_aperture": 0.38887400624128166,
+  "coordinates": [
+    "sensory.0.z[0,0]",
+    "observer.evidence[0,0]",
+    "attention.estimate[0]",
+    "desired_inspection[0]"
+  ],
+  "background_intervention": "sensory.0.z[0,1]"
+}

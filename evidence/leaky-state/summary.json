@@ -1,0 +1,50 @@
+{
+  "status": "nominal_transistor_screen_not_qualified_block",
+  "results": [
+    {
+      "reference_current_a": 1e-09,
+      "before_v": 1.6328152,
+      "after_v": 1.67270491,
+      "endpoint_error_v": 0.0028152000000001287,
+      "step_gain": 0.9972427499999992,
+      "rise_63_time_s": 0.0001370274800000001,
+      "final_return_v": 1.63281521,
+      "mean_supply_power_w": 6.733734446267828e-09,
+      "finite": true
+    },
+    {
+      "reference_current_a": 3e-09,
+      "before_v": 1.63265787,
+      "after_v": 1.67255011,
+      "endpoint_error_v": 0.002657870000000173,
+      "step_gain": 0.9973059999999978,
+      "rise_63_time_s": 4.6978060000000014e-05,
+      "final_return_v": 1.63265787,
+      "mean_supply_power_w": 2.010478976144519e-08,
+      "finite": true
+    },
+    {
+      "reference_current_a": 1e-08,
+      "before_v": 1.63257498,
+      "after_v": 1.67246649,
+      "endpoint_error_v": 0.0025749800000001155,
+      "step_gain": 0.9972877499999977,
+      "rise_63_time_s": 1.574444999999998e-05,
+      "final_return_v": 1.63257498,
+      "mean_supply_power_w": 6.676258024903798e-08,
+      "finite": true
+    }
+  ],
+  "simulator": "******\n** ngspice-42 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2023, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Mar 31 20:15:14 UTC 2024\n******\n",
+  "source_sha256": {
+    "/home/ubuntu/kianv/omnibus-gf180/circuits/leaky_state.spice": "4d7e67ce574ebff4d1aae2e2994b008033b3e10a1b5c3650fa99895fc606caae",
+    "/home/ubuntu/kianv/omnibus-gf180/circuits/screen_leaky_state.py": "76c90781cba7ffda7490dc76c654338c0f4246ccd2d6f1602bc11f1bd749dae6",
+    "/home/ubuntu/svalbard/scratch/transceiver-pad-pdk/ngspice/design.ngspice": "7e222f050318388f37543a64fbd0be55cc15e4b93f57501a09f7c159c4c9e561",
+    "/home/ubuntu/svalbard/scratch/transceiver-pad-pdk/ngspice/sm141064.ngspice": "f6f4a96e18fc5ad11270ad3451aaecc7ac37fc81eb61e15b0d7d94c7bc594a24"
+  },
+  "limitations": [
+    "Ideal storage capacitor and external current reference.",
+    "Nominal corner, 27C, unloaded output, no mismatch.",
+    "No layout, extracted parasitics, reset or full-agent substitution."
+  ]
+}

@@ -8,7 +8,7 @@ This specification defines the intended design, not completed implementation or 
 
 The chip shall occupy one wafer.space GF180MCU 1x1 slot. It shall require no external CPU, RAM or FPGA performing agent computation. External configuration, stimulus generation, power and analog acquisition equipment are permitted. Digital service logic shall handle configuration, instrumentation and the internal environment fixture, not agent inference or policy.
 
-The agent shall use dedicated continuously operating physical paths without time-multiplexed synaptic computation or a global agent clock. The design excludes active field-feedback drivers, floating-gate programming, online learning and an active digital homeostat. Electrical protection shall remain independent of the bounded experimental resource signal.
+The agent shall use dedicated continuously operating physical paths without time-multiplexed synaptic computation or a global agent clock. The design excludes on-chip active field drivers, floating-gate programming, general online synaptic-weight learning and digital homeostatic feedback. Two bounded persistent sensory-reliability parameters, two bounded source-outcome values and bounded analog regional gain regulation are part of the agent. Electrical protection shall remain independent of the bounded experimental resource signal.
 
 ## 2. Behavioral contract
 
@@ -32,17 +32,23 @@ Each specialist shall contain explicit evidence, latent-content, prediction and 
 
 Inference shall implement declared equations for a low-dimensional observation model with bounded latent states. Every variable, equation, range, unit, arithmetic primitive and state update shall appear in the implementation inventory. Products, differences and comparisons shall have explicit circuit implementations.
 
+For aperture gain `a` in [0,1], observed input shall follow the gated scene signal and the predicted observation shall be `a * prediction`, not the unattenuated scene prediction. Define residual `r = observed - a*prediction` and evidence cost proportional to `sum(a*r²)`. Latent feedback shall include the observation-model derivative, proportional to `a²*r` before basis projection and fixed scaling. The higher-order observer shall use the same gated observation model. At zero aperture, unavailable measurements shall contribute no evidence. Verify inferred quality under fractional aperture gains independently of action timing.
+
 ### 3.2 Attention schema and controller
 
 Attention command, actual sensory allocation and estimated allocation shall be distinct states. The schema shall predict actual allocation and its consequences from command copies and sensory feedback. Its prediction error shall change subsequent attention commands.
 
 Actual and estimated allocation shall be independently clampable. Schema output shall remain distinct from sensory confidence and the attention command.
 
+The schema shall represent allocation, switching dynamics and their task-relevant consequences without duplicating actuator circuitry. Document its represented variables and abstraction from the controlled plant. Validate useful prediction/control under held-out actuator disturbances; state count alone shall not establish compression or model adequacy.
+
 ### 3.3 Higher-order observer
 
 The observer shall receive separate evidence, prediction, signed error, command-copy, actual-attention and selected-workspace signals. It shall estimate perceptual reliability, consistency of evidence with prediction, and self-command-conditioned versus unexpected residuals.
 
 Observer estimates shall affect precision, workspace admission and answer/defer selection. The observer shall distinguish similar posteriors with different evidence/prediction support. Observer states and sensory evidence shall be independently perturbable. Observer, precision and admission feedback loops shall be validated together.
+
+Bind observer estimates to the represented content, source and time context. Allocate four of its 24 states to the reliability of its own estimates, using prediction/outcome discrepancy to control their downstream influence. Independently perturb first-order content, its reliability representation and estimate reliability. This is a specified metacognitive function, not a requirement for unlimited recursive observers.
 
 ### 3.4 Coherent workspace
 
@@ -56,9 +62,13 @@ Provide correct-content, suppressed-broadcast and wrong-content intervention con
 
 Context memory shall use continuously powered recurrent attractors with explicit set/reset. Workspace persistence shall use controlled selection/release rather than passive long-term charge retention.
 
+For the three-way categorical grouping rule, use normalized state competition `dx_i/dt = 4*x_i*(x_i - sum_j x_j²)` with cue-loading drive `4*(cue_i-x_i)` only while the normalized cue is supplied. Qualify restoration within declared basins and explicitly test basin-crossing errors. A task-availability input shall gate retrieval/reporting during cue loading and retention intervals without disabling context recurrence or prescribing the agent's internal query sequence. Demonstrate removed-cue retrieval at multiple delays and a memory intervention that changes decisions while preserving scene discrimination. All products, normalization support, set/reset and gating circuitry count toward the existing budget.
+
 Action selection shall use workspace content, context, observer estimates and predicted observation outcomes to answer, defer or inspect a stream. Reserve 16 connection slots for action-command copies into prediction and monitoring, and six further slots for attention-command copies to schema/monitor and action-command copies to monitor. These 22 paths are included in the connection ceiling. Copy residuals shall have independent signed comparison/gain paths.
 
-Specify the complete action objective and any approximation mathematically. For scalar Gaussian information gain, `I = 0.5 * log(v_prior / v_posterior)`. Substitute variance-ratio comparison only where action-ranking equivalence holds for the complete objective. Unequal costs require an appropriate validated approximation. Active-inference claims require implementation and verification of the stated inference/action objective, not error reduction alone.
+Implement the one-step objective `J(a) = EIG(a) + mu * E_q[log p_pref(o)] - lambda * E_q[cost(a,o)]`, where `EIG(a) = E_q(o|a)[KL(q(s|o,a) || q(s|a))]`. Define a normalized, strictly positive preference distribution over declared task outcomes, including correct completion and bounded resource availability. Represent uncertainty through information gain, not by silently treating a hidden belief as an observed outcome. Outcome probabilities, likelihoods and costs shall derive from the declared generative model. Weights and preferences shall remain fixed during primary trials; predeclared sweeps of mu and lambda shall test quantitative predictions without refitting.
+
+Use a two-dimensional uncertainty model with two variances and one covariance for the coupled sensory hypotheses, maintaining positive definiteness. Gaussian information-gain approximations shall use `0.5 * log(det(Sigma_prior) / det(Sigma_posterior))`, with expectation over outcomes where required. Validate approximation error and action rankings across the evaluation cells and adverse covariance cases. Budget covariance updates and bounded-error logarithm arithmetic explicitly. State the assumptions connecting this objective and policy selection to an expected-free-energy formulation before making active-inference claims.
 
 ## 4. Circuit resources and organization
 
@@ -82,11 +92,17 @@ Placement shall follow functional coupling: prediction/error motifs together, se
 
 Signed analog states shall use differential representation. All budgets shall include both sides. Perception shall use leaky integrating states with saturation; context shall use attractors; adaptation shall use separate slow negative-feedback states.
 
-Local dynamics shall span tens to hundreds of microseconds. Up to 40 independently disableable adaptation states shall serve workspace and selected sensory functions, with an adaptation-to-local time-constant ratio of at least ten in the qualified operating range. Verify time constants, leakage, noise, reset and stability across declared operating conditions.
+Local dynamics shall span tens to hundreds of microseconds. The auxiliary-state ceiling is 40: allocate eight states to regional gain regulation, two to persistent sensory-reliability learning, two to source-outcome learning and up to 28 to independently disableable workspace/sensory adaptation. Auxiliary dynamics shall be at least ten times slower than their region's local dynamics in the qualified range. Verify time constants, leakage, noise, reset and stability across declared operating conditions. CLT observation windows shall be relative to measured effective loop times; its biological 100–1,000 ms example does not constrain chip speed.
+
+Source-outcome values shall obey `tau_V dV_i/dt = eligible_i * (reward - V_i)` with bounded `V_i,reward` in [0,1] and normalized `tau_V=20`. Eligibility shall identify the source that owned a completed report; credit shall not migrate while feedback is being delivered. Reward shall be an explicit task-consequence input from the fixture/environment, unavailable to inference before the answer. Declare exposure duration, freeze control and the fixture's outcome rule. Retain values across trial resets and use them in subsequent source competition. These values estimate task outcomes, not sensory noise variance; do not conflate the two learning laws. Physical reward/valid routing and retention require implementation verification.
+
+For each sensory stream, learn bounded residual variance `v` through `tau_L dv/dt = valid * (clip(residual², v_min, v_max) - v)`, with normalized limits `v_min = 0.0625`, `v_max = 4`, and sensory precision `clip(0.25/v, 0.0625, 4)`. The residual shall compare a measurement against physically obtained reference feedback; neither an environment truth label nor an unavailable latent value may be wired into the agent. Feedback validity shall gate updates. Retain these states across trial resets, provide independent freeze/readout, and distinguish them from transient beliefs, calibration and gain regulation. Static weights and update-law parameters remain frozen across task conditions; learned initial states and training history shall be logged. Held-out evaluation shall freeze learning unless adaptation itself is the predeclared test. Qualify analog retention over the complete experimental session; no power-off retention is assumed.
+
+Each of eight regions shall have a bounded gain-control state driven by a declared local activity measure, independently disableable with a fixed-bias replacement. Implement negative feedback toward predeclared heterogeneous activity setpoints, bounded gain and a restoring term preventing integrator windup. Record regional states through observation selectors. Verify startup, saturation recovery, cross-region stability and task preservation. Regulation shall not change synaptic weights or setpoints within a primary trial. Its entire causal loop belongs to the agent; activity regulation shall not be labeled criticality regulation without independent evidence.
 
 Intentional state-capacitor plates shall fit within 0.192 mm² at the selected Type-B MIM density. Observation hold capacitors are separate. Derive capacitor sizes and effective conductances from implemented equations and extracted loading.
 
-Provide three-bit per-primary-state gain trim, regional bias adjustment, a global-gain command with distributed mirrors, and separate workspace inhibition. Hold global gain static within primary trials. Freeze calibration before held-out evaluation; distinguish nominal, calibrated and intentionally heterogeneous conditions. Characterize gain distribution as a physical coupling path, including reverse coupling and noise.
+Provide three-bit per-primary-state gain trim, regional bias adjustment, a global-gain command with distributed mirrors, and separate workspace inhibition. Hold the global command static within primary trials; regional servo states may evolve under their fixed law. Calibration shall be per-die, frozen before held-out evaluation and never refitted per condition. Predeclare intervention changes separately from calibration. Characterize achievable trim steps and actual gain deviations for nominal, calibrated and patterned heterogeneous conditions. Characterize gain distribution as a physical coupling path, including reverse coupling and noise.
 
 ## 5. Configuration and startup
 
@@ -118,15 +134,21 @@ Implement the declared partition cut across fixed and programmable agent paths. 
 
 Measure a 32×32 intervention-response matrix over declared delays at nominal and gain-detuned conditions. Use calibrated pulse amplitudes, both signs, sham interventions, background subtraction and uncertainty estimates. Analyze susceptibility, relaxation and operating-point dependence with finite-size and alternative-model controls.
 
+Include ascending/descending gain sweeps with regional servos active and with declared fixed-bias replacements. Measure settling and rate dependence before attributing hysteresis. Enumerate directed cycles of lengths two through four and publish intervention-site coverage; inaccessible cycles shall remain unmeasured. Infer local dynamics from normalized response models with hidden-state and identifiability checks. Topology metrics and products of sampled responses shall not substitute for dynamical stability or integrated-information analysis.
+
 ### 6.3 Coupling observation
 
 Provide 12 passive pickup coupons: three locations, two orientations and shielded/unshielded variants, with supply/substrate monitoring and buffered selection. Specify the sensed coupling mechanism and geometry-dependent transfer function. Include conducted-injection, loading, distance and shielding controls with measured bandwidth and noise floors.
 
 Acquire coupling signals during autonomous trials alongside clock/trigger and behavioral records. Report correlations and detection limits as coupling measurements, not field causation or CEMI satisfaction. No active field-feedback driver is included.
 
+Provide one passive on-die injection loop on two protected instrument pads, driven only by an external current-limited instrument. It shall have no intended functional connection to agent state nodes. Include loop metal, return path, ESD, pad loading and voltage/current limits in sign-off. Measure field-to-state transfer with calibrated injection, sham and matched conducted-interference controls. Bound supply/substrate/thermal coupling and verify functional recovery. Positive and null results shall be limited to the applied field, frequency, geometry and sensitivity; neither shall certify or refute a consciousness theory.
+
 ## 7. Fixture, reports and I/O
 
 The internal environment fixture shall contain a seeded LFSR, pattern sequencer and two coarse stimulus DACs. It shall implement declared stimulus and action-to-observation rules without computing agent inference or policy. Host-independent trials shall continue after configuration-host disconnection. Record fixture clock and seed. Separate external-stimulus trials shall verify agent operation with service and fixture clocks stopped.
+
+The existing perturbation path shall also support seeded dither at up to four preselected states, with amplitude characterized relative to intrinsic and measurement noise. Dither is a logged intervention, disabled in primary trials unless explicitly part of the frozen condition; it shall not share a stimulus DAC concurrently without an accounted dedicated path.
 
 A fixed three-bit report alphabet shall expose allocation estimate, uncertainty and monitor attribution through existing status or serial outputs, with validity indication. Attribution shall originate in the observer. Evaluate reports against independently controlled conditions; report silence shall disconnect outward telemetry without disabling internal computation or action.
 
@@ -138,7 +160,8 @@ A fixed three-bit report alphabet shall expose allocation estimate, uncertainty 
 | Buffered analog observation | 6 |
 | Action/status | 8 |
 | Bias/reference/test | 6 |
-| **Assigned signals** | **36** |
+| External passive-loop injection | 2 |
+| **Assigned signals** | **38** |
 
 The limit is 50 functional signal pads, with power/ground and provider-reserved sites assigned separately. Unused signal positions remain uncommitted. Serial service shall tolerate indefinite clock stops; analog operation continues unless quiescence/reset is asserted.
 
@@ -154,16 +177,18 @@ Use one common external supply for the retained common-rail pad ring. Physically
 |---|---:|
 | Primary states, adaptation, gain trim and state capacitors | 1.45 |
 | Weighted paths, storage and local routing | 3.50 |
-| Bias, reset, gain/inhibition distribution and fixture DACs | 0.75 |
+| Bias, reset, regional servos, gain distribution and fixture DACs | 0.85 |
 | Holds, selectors, clamps and perturbation circuits | 1.90 |
 | Service, readback, CRC and fixture sequencer | 0.85 |
-| Dedicated inference/control arithmetic | 0.50 |
-| Coupling coupons and readout | 0.15 |
-| **Functional blocks** | **9.10** |
-| Global routing, guards, isolation, power and contingency | **1.40** |
+| Dedicated inference/control arithmetic | 0.55 |
+| Coupling coupons, passive injection loop and readout | 0.20 |
+| **Functional blocks** | **9.30** |
+| Global routing, guards, isolation, power and contingency | **1.20** |
 | **Internal area limit** | **10.50** |
 
 Allocations include local physical overhead and require extracted measurements before sign-off. Do not double-count overlapping metal/device area. The operating-power target is below 100 mW excluding external loads, verified with bias, reference, pad and measurement activity included.
+
+Regional feedback, estimate-reliability and preference/covariance computation shall fit within the existing primary/auxiliary state and weighted-path ceilings. Derive their complete circuit, routing and storage costs from the implementation inventory; reuse of state slots does not establish area fit.
 
 Area reduction shall preserve integrated mechanisms, 96-channel capture, 32 intervention sites, safe configuration and the host-independent fixture. Any specification change required to close area shall be explicit and rerun functional acceptance.
 
@@ -179,13 +204,17 @@ One frozen configuration shall pass the full task family with all five primary m
 | Attention schema | Predicts withheld actuator disturbances; schema intervention differs from direct-controller intervention and changes useful control |
 | Predictive inference | Independent prior, precision and error manipulations produce quantitative responses predicted by implemented equations |
 
+With broadcast suppressed, test preserved local relational discrimination separately from lost cross-specialist behavior. Sweep broadcast/inhibition in both directions and measure selection threshold, persistence and hysteresis against graded and bistable models; results characterize this implementation rather than falsify all versions of GWT. Compare schema and controller lesions at matched first-order performance. Cross first-order content and content-bound observer estimates in a factorial intervention, with the additional estimate-reliability states tested separately.
+
 Register recurrent-agent, static acyclic inter-node, context-lesion, partition-cut and report-silent conditions on each tested die. Document differences in active edges, current, adaptation, memory and operating point. Use replayed inputs for action-disabled comparisons and identify them as a different closed-loop condition.
 
 Pre-register numerical thresholds, trial counts, fitting/evaluation splits and uncertainty methods. Validate robustness across declared bias/temperature/loading conditions and multiple dies. Record calibration separately from held-out testing. Repeat key tests with instrumentation disabled. Track unintended coupling through supplies, references, substrate and observation circuitry.
 
-For IIT-oriented analysis, publish an intervention-derived transition model of a four-node subsystem with explicit IIT version, quantity, boundary convention, discretization and sampling lag. Validate the solver on known cases, propagate measurement uncertainty and distinguish exact computation on an estimated model from exact physical measurement. Whole-die maximal-complex certification is outside scope.
+For IIT-oriented analysis, publish an intervention-derived transition model of a four-node subsystem with explicit IIT version, quantity, boundary convention, discretization and at least two sampling lags. Predeclare subsystem selection by functional relevance, clamp access, boundary control and state observability, before examining integration scores. Validate the solver on known cases, propagate measurement uncertainty and distinguish exact computation on an estimated model from exact physical measurement. Whole-die maximal-complex certification is outside scope.
 
-Criticality evidence shall use response functions and controls, not avalanche power laws alone. No PCI consciousness threshold, wiring-count surrogate for integrated information, CLT compliance or genuine-precarity valence claim is included.
+Publish raw per-trial acquired samples and timestamps, pulse/field calibration, response matrices, masks, failed trials, configuration and per-die calibration, analysis code and fitted structured dynamical models. Clearly identify unobserved states and model assumptions. Do not publish an inferred whole-chip model as an exhaustively measured joint transition table. Report stability to sampling lag, discretization and independent replication trials.
+
+Criticality evidence shall use response functions and controls, not avalanche power laws alone. Critical Loop Theory refers specifically to the author's P1–P5 in CLT_REFERENCE.md. CLT compliance shall require a defined cycle/information functional, factorization/scale rule and temporal requirement; response matrices alone do not establish it. No PCI consciousness threshold, wiring-count surrogate for integrated information or genuine-precarity valence claim is included.
 
 ## 10. Implementation acceptance gates
 

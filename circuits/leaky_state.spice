@@ -1,0 +1,13 @@
+* Six-transistor current-mirror OTA with unity negative feedback.
+* Ports: analog drive, stored voltage, 3.3V rail, return, reference-current input.
+* IREF must inject positive current into BIAS; bias generation is external.
+.subckt leaky_state IN OUT VDD VSS BIAS
+MNREF BIAS BIAS VSS VSS nfet_03v3 w=2u l=2u
+MNTAIL TAIL BIAS VSS VSS nfet_03v3 w=2u l=2u
+MNIN DIODE IN TAIL VSS nfet_03v3 w=4u l=2u
+MNFB OUT OUT TAIL VSS nfet_03v3 w=4u l=2u
+MPREF DIODE DIODE VDD VDD pfet_03v3 w=8u l=2u
+MPOUT OUT DIODE VDD VDD pfet_03v3 w=8u l=2u
+* Nominal ~2.02pF including modeled fringe; geometry not yet laid out.
+XSTORE OUT VSS cap_mim_2f0_m4m5_noshield c_length=31.6u c_width=31.6u
+.ends leaky_state
